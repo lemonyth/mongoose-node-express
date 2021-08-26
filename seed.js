@@ -1,3 +1,5 @@
+// seed data for populating the database with
+
 const mongoose = require('mongoose');
 const Product = require('./models/product');
 
