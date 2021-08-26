@@ -72,6 +72,13 @@ mongoose.connect('mongodb://localhost:27017/farmStand', {useNewUrlParser: true})
         res.redirect(`/products/${product._id}`)
     })
 
+    //delete route
+    app.delete('/products/:id', async(req, res)=>{
+        const {id} = req.params;
+        await Product.findByIdAndDelete(id);
+        res.redirect('/products')
+    })
+
     
 
     
